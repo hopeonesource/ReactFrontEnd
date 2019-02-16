@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './containers/headerContainer.js';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import AboutExample from './containers/AboutExample';
+import About from './containers/About';
 import HomeExample from './containers/HomeExample';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
           <div>
             <Header />
             <Route exact path="/" component={HomeExample} />
-            <Route exact path="/about" component={AboutExample} />
+            <Route exact path="/about" component={About} />
           </div>
         </Router>
       </div>
