@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ButtonAppBar from './ButtonAppBar';
-import { Typography } from '@material-ui/core';
+import Header from './containers/headerContainer.js';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <ButtonAppBar />
-        <Typography variant='h2'>Welcome to Hope One Source</Typography>
+        <Header />
       </div>
     );
   }
