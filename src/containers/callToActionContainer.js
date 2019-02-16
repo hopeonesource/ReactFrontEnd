@@ -7,7 +7,7 @@ class CallToAction extends Component {
     return (
       <div>
       <ActionButton text={'Need Services?'} />
-      <ActionButton text={'Need Services?'} />
+      <ActionButton text={'Provide Services?'} />
       </div>
     )
   }
