@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Image from 'material-ui-image'
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -62,27 +62,11 @@ const AboutHero = (props) => {
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
               About Hope One Source
             </Typography>
-            <Typography variant="h6" align="center" color="textSecondary" paragraph>
-              Something short and leading about the collection below—its contents, the creator, etc.
-              Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-              entirely.
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={16} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Provide Services?
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Need Services?
-                  </Button>
-                </Grid>
-              </Grid>
+            <Image align="center"
+              src="https://uc72ae760d176baa9c1841172ab2.previews.dropboxusercontent.com/p/thumb/AAXAPUauznm3qLQGV9U9mznlG-Ru7A2q5ncT6jQNIucaSUkNpI-7cO9n3kTVfO9zcJK_EjRL0c-scZL30XmCKIanoKBxQySyQAGV7Mp-vGMpubeC2Uclz0f4qXesIEdvc_2Ap4nMvoW1TNYO4IQSSoRLLIoz23pv2UACTbeqIlR64dzrN88gC6bCW1Ul4Uns08oREcXkum5tUQtvvhUe-snCG1uGjHM8ZAQsk4Tzg-aa9JS48BN8Pt8oIfnVqs5IRwgKkM5UNZ13Y_wCMP2tKtrt/p.jpeg?size_mode=5"
+            />
             </div>
           </div>
-        </div>
   );
 }
 
