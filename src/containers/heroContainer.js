@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../css/Hero.css";
-import { Grid, Paper } from '@material-ui/core';
 
 class Hero extends Component {
   render() {
@@ -11,20 +10,27 @@ class Hero extends Component {
             style={{
               backgroundImage:
                 "url(https://images.unsplash.com/photo-1543312226-3f1d5eb9f5e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1599&q=80)",
-              "background-size": "cover",
-              "background-repeat": "no-repeat",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
               height: "80vh"
             }}
           >
-          <div className="d-flex flex-column justify-content-center h-100">
-
+            <div className="d-flex flex-column justify-content-center h-100">
               <h1
-                style={{ textAlign: "center", color: "white", fontWeight: 'bold'}}
+                style={{
+                  textAlign: "center",
+                  color: "white",
+                  fontWeight: "bold"
+                }}
               >
                 Welcome to HopeOneSource
               </h1>
               <h4
-                style={{ textAlign: "center", color: "white", fontWeight: 'bold'}}
+                style={{
+                  textAlign: "center",
+                  color: "white",
+                  fontWeight: "bold"
+                }}
               >
                 Connecting Vulnerable People To Services
               </h4>
@@ -33,7 +39,7 @@ class Hero extends Component {
                 style={{
                   textAlign: "center",
                   color: "white",
-                  "justify-content": "space-between",
+                  justifyContent: "space-between",
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}
@@ -41,7 +47,7 @@ class Hero extends Component {
                 <button
                   type="button"
                   className="btn btn-lily btn-margin btn-rounded"
-                  style={{ "margin-left": "5px" }}
+                  style={{ marginLeft: "5px" }}
                 >
                   Get Services
                   <i className="fas fa-caret-right ml-3" />
@@ -49,12 +55,11 @@ class Hero extends Component {
                 <button
                   type="button"
                   className="btn btn-lily btn-margin btn-rounded"
-                  style={{ "margin-left": "5px" }}
+                  style={{ marginLeft: "5px" }}
                 >
                   Provide Services <i className="fas fa-caret-right ml-3" />
                 </button>
               </div>
-
             </div>
           </div>
         </div>
