@@ -11,15 +11,11 @@ const styles = {
   root: {
     flexGrow: 1,
     maxWidth: '800px',
-    margin: 'auto'  
+    margin: 'auto'
   },
   grow: {
     flexGrow: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
+  }
 };
 
 function About(props) {

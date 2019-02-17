@@ -7,9 +7,13 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   headspacing: {
     marginTop: '50px',
+    paddingLeft: '25px',
+    paddingRight: '25px'
   },
   bodyspacing: {
-    marginBottom: '50px'
+    marginBottom: '50px',
+    paddingLeft: '25px',
+    paddingRight: '25px'
   }
 });
 
