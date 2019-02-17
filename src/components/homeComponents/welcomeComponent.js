@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Purpose from "./welcomeComponents/purposeComponent.js";
+import Involved from "./welcomeComponents/getInvolvedComponent.js";
 
 
 //import React from 'react';
@@ -24,13 +25,13 @@ function Welcome(props) {
 
   return (
     <div className={classes.root}>
+
       <Grid container spacing={24}>
         <Grid item xs>
-          <Paper className={classes.paper}>xs</Paper>
-          <Purpose />
+          <Paper className={classes.paper}><Purpose /></Paper>
         </Grid>
-
       </Grid>
+
       <Grid container spacing={24}>
         <Grid item xs>
           <Paper className={classes.paper}>xs</Paper>
@@ -38,10 +39,23 @@ function Welcome(props) {
         <Grid item xs={6}>
           <Paper className={classes.paper}>xs=6</Paper>
         </Grid>
+      </Grid>
+
+      <Grid container spacing={24}>
         <Grid item xs>
           <Paper className={classes.paper}>xs</Paper>
         </Grid>
+        <Grid item xs={6}>
+          <Paper className={classes.paper}>xs=6</Paper>
+        </Grid>
       </Grid>
+
+      <Grid container spacing={24}>
+        <Grid item xs>
+          <Paper className={classes.paper}><Involved /></Paper>
+        </Grid>
+      </Grid>
+
     </div>
   );
 }
