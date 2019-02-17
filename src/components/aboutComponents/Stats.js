@@ -18,8 +18,16 @@ const styles = {
   grow: {
     flexGrow: 1
   },
-  largeIcon: {
-    fontSize: "48px"
+  redLargeIcon: {
+    fontSize: "48px",
+    color: "#bd2937"
+  },
+  yellowLargeIcon: {
+    fontSize: "48px",
+    color: "#f3b359"
+  },
+  subFont: {
+    color: "#413f3f"
   }
 };
 
@@ -29,21 +37,21 @@ function Stats(props) {
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={12} md={4} className={classes.statSpacing}>
-          <TextsmsIcon className={classes.largeIcon} />
+          <TextsmsIcon className={classes.yellowLargeIcon} />
           <Typography variant="h4">500,000+</Typography>
-          <Typography variant="subtitle1">SMS messages sent in 2019</Typography>
+          <Typography variant="subtitle1" className={classes.subFont}>SMS messages sent in 2019</Typography>
         </Grid>
         <Grid item xs={12} md={4} className={classes.statSpacing}>
-          <FavoriteIcon className={classes.largeIcon} />
+          <FavoriteIcon className={classes.redLargeIcon} />
           <Typography variant="h4">1600+</Typography>
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" className={classes.subFont}>
             Community members in need registered for the service
           </Typography>
         </Grid>
         <Grid item xs={12} md={4} className={classes.statSpacing}>
-          <SupervisorAccountIcon className={classes.largeIcon} />
+          <SupervisorAccountIcon className={classes.yellowLargeIcon} />
           <Typography variant="h4">200+</Typography>
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" className={classes.subFont}>
             Service providers using the messages
           </Typography>
         </Grid>

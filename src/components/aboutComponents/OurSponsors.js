@@ -10,15 +10,11 @@ const styles = {
   grow: {
     flexGrow: 1
   },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20
-  },
   spacing: {
     marginBottom: 20,
-    marginRight: 20,
-    marginLeft: 20,
-    padding: 8
+    paddingRight: 20,
+    paddingLeft: 20,
+    // padding: 8
   },
   centered: {
     display: "block",

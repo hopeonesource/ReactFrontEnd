@@ -46,6 +46,11 @@ const styles = theme => ({
   cardContent: {
     flexGrow: 1
   },
+  headspacing: {
+    marginTop: "50px",
+    paddingLeft: "25px",
+    paddingRight: "25px"
+  },
   footer: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing.unit * 6
@@ -59,6 +64,7 @@ const AboutHero = props => {
     <div className={classes.heroUnit}>
       <div className={classes.heroContent}>
         <Typography
+          className={classes.headspacing}
           component="h1"
           variant="h2"
           align="center"

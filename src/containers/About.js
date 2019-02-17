@@ -24,8 +24,8 @@ function About(props) {
       <AboutHero />
       <WhoWeAre />
       <WhatWeDo />
-      <OurSponsors />
       <OurTeam />
+      <OurSponsors />
     </div>
   );
 }

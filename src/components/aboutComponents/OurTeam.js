@@ -1,77 +1,136 @@
-import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/core/styles";
-
+import React from 'react'
+import { Grid, Paper } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import Image from 'material-ui-image'
+import { withStyles } from '@material-ui/core/styles';
+import frank from '../../images/frank.png';
+import nick from '../../images/nick.png';
+import needImage from '../../images/needImage.png';
 const styles = theme => ({
-  appBar: {
-    position: "relative"
+   spacing: {
+    padding: "8px 10px 8px 10px",
+    display: 'flex',
+    flexDirection: 'row',
+    boxShadow: "none"
   },
-  icon: {
-    marginRight: theme.spacing.unit * 2
+  centered: {
+    display: 'inline-block',
+    height: "100px",
+    width: "100px",
+    padding: "10px",
+    borderRadius: "50%"
   },
-  heroUnit: {
-    backgroundColor: theme.palette.background.paper
-  },
-  heroContent: {
-    maxWidth: 600,
-    margin: "0 auto",
-    padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`
-  },
-  heroButtons: {
-    marginTop: theme.spacing.unit * 4
-  },
-  layout: {
-    width: "auto",
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
-    [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]: {
-      width: 1100,
-      marginLeft: "auto",
-      marginRight: "auto"
-    }
-  },
-  cardGrid: {
-    padding: `${theme.spacing.unit * 8}px 0`
-  },
-  card: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column"
-  },
-  cardMedia: {
-    paddingTop: "56.25%" // 16:9
-  },
-  cardContent: {
-    flexGrow: 1
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing.unit * 6
+  position: {
+    color: '#413f3f'
   },
   headspacing: {
     marginTop: "50px",
-    paddingLeft: "25px",
-    paddingRight: "25px"
+    paddingLeft: "20px",
+    paddingRight: "20px"
+  },
+  bodyspacing: {
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    boxSizing: "content-box",
+    marginBottom: "50px"
   }
 });
-
-const OurTeam = props => {
+const OurTeam = (props) => {
   const { classes } = props;
-
   return (
-    <div>
-      <Typography
-        className={classes.headspacing}
-        component="h1"
-        variant="h2"
-        align="left"
-        color="textPrimary"
-        gutterBottom
-      >
-        Our Team
-      </Typography>
-    </div>
-  );
-};
+      <div>
+        <Typography className={classes.headspacing} variant="h2" align="left" color="textPrimary" gutterBottom>
+          Our Team
+        </Typography>
+        <Typography className={classes.bodyspacing} variant="subtitle1" align="left" color="textPrimary" gutterBottom>
+            Members with 1+ year of service.
+        </Typography>
 
+        <Grid className={classes.bodyspacing} container>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper className={classes.spacing}>
+              <img className={classes.centered} src={needImage}/>
+              <div>
+              <Typography variant="subtitle1" gutterBottom>Tim Underwood</Typography>
+              <Typography variant="body2" className={classes.position} gutterBottom>Team Lead</Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper className={classes.spacing}>
+              <img className={classes.centered} src={needImage}/>
+              <div>
+              <Typography variant="subtitle1" gutterBottom>Chris Teitzel</Typography>
+              <Typography variant="body2" className={classes.position} gutterBottom>Architect Lead</Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper className={classes.spacing}>
+              <img className={classes.centered} src={needImage}/>
+              <div>
+              <Typography variant="subtitle1" gutterBottom>Tom Gertin</Typography>
+              <Typography variant="body2" className={classes.position} gutterBottom>GIS & Data Lead</Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper className={classes.spacing}>
+              <img className={classes.centered} src={needImage}/>
+              <div>
+              <Typography variant="subtitle1" gutterBottom> Anthony Glynn</Typography>
+              <Typography variant="body2" className={classes.position} gutterBottom>Development Lead</Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper className={classes.spacing}>
+              <img className={classes.centered} src={nick}/>
+              <div>
+              <Typography variant="subtitle1" gutterBottom> Nick Hanson</Typography>
+              <Typography variant="body2" className={classes.position} gutterBottom>Communications Lead</Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper className={classes.spacing}>
+              <img className={classes.centered} src={frank}/>
+              <div>
+              <Typography variant="subtitle1" gutterBottom>Frank Adames</Typography>
+              <Typography variant="body2" className={classes.position} gutterBottom>Technical Lead</Typography>
+
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper className={classes.spacing}>
+              <img className={classes.centered} src={needImage}/>
+              <div>
+              <Typography variant="subtitle1" gutterBottom>Name</Typography>
+              <Typography variant="body2" className={classes.position} gutterBottom>Position Title</Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper className={classes.spacing}>
+              <img className={classes.centered} src={needImage}/>
+              <div>
+              <Typography variant="subtitle1" gutterBottom>Name</Typography>
+              <Typography variant="body2" className={classes.position} gutterBottom>Position Title</Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Paper className={classes.spacing}>
+              <img className={classes.centered} src={needImage}/>
+              <div>
+              <Typography variant="subtitle1" gutterBottom>Name</Typography>
+              <Typography variant="body2" className={classes.position} gutterBottom>Position Title</Typography>
+              </div>
+            </Paper>
+          </Grid>
+        </Grid>
+      </div>
+  );
+}
 export default withStyles(styles)(OurTeam);
