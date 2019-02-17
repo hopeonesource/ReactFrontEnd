@@ -10,7 +10,8 @@ const styles = {
   root: {
     flexGrow: 1,
     maxWidth: "800px",
-    margin: "auto"
+    margin: "auto",
+    marginTop: "16px"
   },
   grow: {
     flexGrow: 1

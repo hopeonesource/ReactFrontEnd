@@ -1,11 +1,10 @@
-import React from 'react'
-import { Grid, Paper } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import frank from '../../images/frank.png';
-import nick from '../../images/nick.png';
-import needImage from '../../images/needImage.png';
-
+import React from "react";
+import { Grid, Paper } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import { withStyles } from "@material-ui/core/styles";
+import frank from "../../images/frank.png";
+import nick from "../../images/nick.png";
+import needImage from "../../images/needImage.png";
 const styles = theme => ({
   spacing: {
     padding: "8px 10px 8px 10px",
