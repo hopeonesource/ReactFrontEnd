@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 import CallToAction from "./callToActionContainer.js"
 import { withStyles } from '@material-ui/core/styles';
+import Hero from './testHeroContainer.js'
 
-const styles = () => ({
-  root: {
-    maxWidth: '800px',
-    backgroundImage: '',
-  }
-})
+
+
 class Home extends Component {
   render() {
-    const { classes } = this.props;
+
     // const classes = this.props.classes;
     return (
-      <div className={classes.root}>
-        <CallToAction />
+      <div >
+        <Hero />
       </div>
     );
   }
 }
 
-export default withStyles(styles)(Home);
+export default (Home);

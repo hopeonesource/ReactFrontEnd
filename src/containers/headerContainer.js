@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div>
       <ButtonAppBar />
-      <Typography variant='h2'>Welcome to Hope One Source</Typography>
+
       </div>
     );
   }
