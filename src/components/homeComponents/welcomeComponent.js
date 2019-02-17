@@ -7,6 +7,8 @@ import map from "./welcomeComponents/mapComponent.js";
 import success from "./welcomeComponents/successComponent.js";
 import successVideo from "./welcomeComponents/successVideoComponent.js";
 
+import InternalMap from "./welcomeComponents/internalMapComponent.js";
+
 
 //import React from 'react';
 import PropTypes from 'prop-types';
@@ -30,6 +32,13 @@ function Welcome(props) {
 
   return (
     <div className={classes.root}>
+
+
+      <Grid container spacing={24}>
+        <Grid item xs>
+          <Paper className={classes.paper}><InternalMap /></Paper>
+        </Grid>
+      </Grid>
 
       <Grid container spacing={24}>
         <Grid item xs>
