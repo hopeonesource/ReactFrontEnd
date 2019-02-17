@@ -1,11 +1,11 @@
 import React from 'react'
 import { Grid, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import Image from 'material-ui-image'
 import { withStyles } from '@material-ui/core/styles';
 import frank from '../../images/frank.png';
 import nick from '../../images/nick.png';
 import needImage from '../../images/needImage.png';
+
 const styles = theme => ({
    spacing: {
     padding: "8px 10px 8px 10px",
@@ -32,7 +32,7 @@ const styles = theme => ({
     paddingLeft: "20px",
     paddingRight: "20px",
     boxSizing: "content-box",
-    marginBottom: "50px"
+    marginBottom: "20px"
   }
 });
 const OurTeam = (props) => {
