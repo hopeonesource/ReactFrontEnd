@@ -1,0 +1,25 @@
+.purposeContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.phoneDiv {
+  grid-area: 1/1/5/1;
+}
+
+.whatWeDo {
+  grid-area: 1/2/2/2;
+}
+
+.providers {
+  grid-area: 2/2/3/2;
+}
+
+.vulnerable {
+  grid-area: 3/2/4/2;
+}
+
+.local {
+  grid-area: 4/2/5/2;
+}
