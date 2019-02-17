@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Hero from "./testHeroContainer.js";
+import Hero from "./heroContainer.js";
 
 class Home extends Component {
   render() {
