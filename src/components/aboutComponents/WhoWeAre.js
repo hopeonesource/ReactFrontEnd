@@ -1,33 +1,70 @@
-import React from 'react'
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Image from 'material-ui-image'
-import { withStyles } from '@material-ui/core/styles';
+import React, { Component } from "react";
+import Typography from "@material-ui/core/Typography";
+import { withStyles } from "@material-ui/core/styles";
+import IconButton from '@material-ui/core/IconButton';
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import ToggleDisplay from 'react-toggle-display';
 
 const styles = theme => ({
   headspacing: {
-    marginTop: '50px',
+    marginTop: "50px",
+    paddingLeft: "25px",
+    paddingRight: "25px"
   },
   bodyspacing: {
-    marginBottom: '50px'
+    marginBottom: "50px",
+    paddingLeft: "25px",
+    paddingRight: "25px"
   }
 });
 
+class WhoWeAre extends Component {
 
-const WhoWeAre = (props) => {
-  const { classes } = props;
+  state = { show: false }
 
-  return (
-      <div>
-        <Typography className={classes.headspacing} variant="h2" align="left" color="textPrimary" gutterBottom>
-          Who We Are
-        </Typography>
-        <Typography className={classes.bodyspacing} variant="body1" align="left" color="textPrimary" gutterBottom>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </Typography>
-      </div>
-  );
+  handleClick() {
+  this.setState({
+    show: !this.state.show
+  });
 }
 
+  render(){
+    const { classes } = this.props;
+    return (
+      <div>
+        <Typography
+          className={classes.headspacing}
+          variant="h2"
+          align="left"
+          color="textPrimary"
+          gutterBottom
+        >
+          Who We Are
+        </Typography>
+        <Typography
+          className={classes.bodyspacing}
+          variant="body1"
+          align="left"
+          color="textPrimary"
+          gutterBottom
+        >
+            Lorem ipsum dolor sit amet, {" "}
+          <ToggleDisplay show={this.state.show}>
+            consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+          </ToggleDisplay>
+          <IconButton aria-label="MoreHoriz" onClick={ () => this.handleClick() }>
+            <MoreHorizIcon fontSize="small" />
+          </IconButton>
+       </Typography>
+      </div>
+    );
+  }
+};
 
 export default withStyles(styles)(WhoWeAre);
