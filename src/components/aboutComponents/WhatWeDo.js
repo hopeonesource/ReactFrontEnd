@@ -13,7 +13,7 @@ const styles = theme => ({
     paddingRight: "25px"
   },
   bodyspacing: {
-    marginBottom: "50px",
+    marginBottom: "20px",
     paddingLeft: "25px",
     paddingRight: "25px"
   }

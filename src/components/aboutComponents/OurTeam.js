@@ -31,7 +31,7 @@ const styles = theme => ({
     paddingLeft: "20px",
     paddingRight: "20px",
     boxSizing: "content-box",
-    marginBottom: "50px"
+    marginBottom: "20px"
   }
 });
 const OurTeam = props => {

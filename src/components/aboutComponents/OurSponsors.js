@@ -4,12 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
 const styles = {
-  root: {
-    flexGrow: 1
-  },
-  grow: {
-    flexGrow: 1
-  },
+
   spacing: {
     marginBottom: 20,
     paddingRight: 20,
@@ -19,13 +14,19 @@ const styles = {
   centered: {
     display: "block",
     margin: "auto",
-    width: "80%",
+    width: "60%",
     height: "50%"
   },
   headspacing: {
     marginTop: "50px",
     paddingLeft: "25px",
     paddingRight: "25px"
+  },
+  bodyspacing: {
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    boxSizing: "content-box",
+    marginBottom: "30px"
   }
 };
 
@@ -43,8 +44,8 @@ function OurSponsors(props) {
         Our Sponsors
       </Typography>
 
-      <Grid container>
-        <Grid item xs={12} sm={6} md={4}>
+      <Grid className={classes.bodyspacing} container>
+        <Grid item xs={12} sm={6} md={2}>
           <div className={classes.spacing}>
             <a href="https://www.hopeonesource.org/our-sponsors">
               <img
@@ -56,7 +57,7 @@ function OurSponsors(props) {
             </a>
           </div>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <div className={classes.spacing}>
             <a href="https://www.hopeonesource.org/our-sponsors">
               <img
@@ -67,7 +68,7 @@ function OurSponsors(props) {
             </a>
           </div>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <div className={classes.spacing}>
             <a href="https://www.hopeonesource.org/our-sponsors">
               <img
@@ -78,7 +79,7 @@ function OurSponsors(props) {
             </a>
           </div>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <div className={classes.spacing}>
             <a href="https://www.hopeonesource.org/our-sponsors">
               <img
@@ -89,7 +90,7 @@ function OurSponsors(props) {
             </a>
           </div>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <div className={classes.spacing}>
             <a href="https://www.hopeonesource.org/our-sponsors">
               <img
@@ -100,7 +101,7 @@ function OurSponsors(props) {
             </a>
           </div>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <div className={classes.spacing}>
             <a href="https://www.hopeonesource.org/our-sponsors">
               <img
