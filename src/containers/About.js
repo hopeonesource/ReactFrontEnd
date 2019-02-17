@@ -21,12 +21,14 @@ const styles = {
 function About(props) {
   const { classes } = props;
   return (
-    <div className={classes.root}>
+    <div>
       <AboutHero />
-      <WhoWeAre />
-      <WhatWeDo />
-      <OurTeam />
-      <OurSponsors />
+      <div className={classes.root}>
+        <WhoWeAre />
+        <WhatWeDo />
+        <OurTeam />
+        <OurSponsors />
+      </div>
     </div>
   );
 }
