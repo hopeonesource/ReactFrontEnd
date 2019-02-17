@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
+import Stats from "./Stats";
 
 const styles = theme => ({
   headspacing: {
@@ -44,6 +45,7 @@ const WhatWeDo = props => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </Typography>
+      <Stats />
     </div>
   );
 };
