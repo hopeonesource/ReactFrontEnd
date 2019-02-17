@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "../css/Hero.css";
+import { Grid, Paper } from '@material-ui/core';
 
 class Hero extends Component {
   render() {
     return (
       <header>
-        <section className="view">
+        <div className="view">
           <div
             style={{
               backgroundImage:
@@ -15,16 +16,15 @@ class Hero extends Component {
               height: "80vh"
             }}
           >
-            <div className="d-flex flex-column justify-content-center h-100">
+          <div className="d-flex flex-column justify-content-center h-100">
+
               <h1
-                className="heading display-3"
-                style={{ textAlign: "center", color: "white" }}
+                style={{ textAlign: "center", color: "white", fontWeight: 'bold'}}
               >
                 Welcome to HopeOneSource
               </h1>
               <h4
-                className="subheading font-weight-bold"
-                style={{ textAlign: "center", color: "white" }}
+                style={{ textAlign: "center", color: "white", fontWeight: 'bold'}}
               >
                 Connecting Vulnerable People To Services
               </h4>
@@ -54,9 +54,10 @@ class Hero extends Component {
                   Provide Services <i className="fas fa-caret-right ml-3" />
                 </button>
               </div>
+
             </div>
           </div>
-        </section>
+        </div>
       </header>
     );
   }
