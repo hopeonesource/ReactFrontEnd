@@ -5,9 +5,9 @@ import logo from '../images/HopeOneSourceLogo2019.png'
 
 const styles = () => ({
   container: {
-    maxWidth: '100%',
-    maxHeight: '100%',
-    backgroundImage:`url(${logo})`,
+    // maxWidth: '100%',
+    // maxHeight: '100%',
+    // backgroundImage:`url(${logo})`,
     backgroundSize: "cover",
   }
 })
