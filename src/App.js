@@ -5,6 +5,7 @@ import Home from "./containers/homeContainer.js";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import About from "./containers/About";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import Card from './components/cardView'
 
 const theme = createMuiTheme({
   typography: {
@@ -17,7 +18,7 @@ const theme = createMuiTheme({
   }
 });
 class App extends Component {
-  render() {
+  render () {
     return (
       <div>
         <MuiThemeProvider theme={theme}>
@@ -34,4 +35,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
