@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ButtonAppBar from '../ButtonAppBar';
+import React, { Component } from "react";
+import ButtonAppBar from "../ButtonAppBar";
 
 class Header extends Component {
   render() {
