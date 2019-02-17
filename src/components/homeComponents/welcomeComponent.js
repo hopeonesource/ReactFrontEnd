@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import Purpose from "./welcomeComponents/purposeComponent.js";
 import Involved from "./welcomeComponents/getInvolvedComponent.js";
 
+import mapText from "./welcomeComponents/mapTextComponent.js";
+import map from "./welcomeComponents/mapComponent.js";
+import success from "./welcomeComponents/successComponent.js";
+import successVideo from "./welcomeComponents/successVideoComponent.js";
+
 
 //import React from 'react';
 import PropTypes from 'prop-types';
@@ -34,19 +39,19 @@ function Welcome(props) {
 
       <Grid container spacing={24}>
         <Grid item xs>
-          <Paper className={classes.paper}>xs</Paper>
+          <Paper className={classes.paper}>map</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper className={classes.paper}>mapText</Paper>
         </Grid>
       </Grid>
 
       <Grid container spacing={24}>
         <Grid item xs>
-          <Paper className={classes.paper}>xs</Paper>
+          <Paper className={classes.paper}>success</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper className={classes.paper}>successVideo</Paper>
         </Grid>
       </Grid>
 
