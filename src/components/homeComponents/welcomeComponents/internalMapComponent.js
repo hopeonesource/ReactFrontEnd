@@ -1,59 +1,44 @@
+
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import ReactMapGL from 'react-map-gl';
+import MapGL, {NavigationControl} from 'react-map-gl';
+const TOKEN = 'pk.eyJ1IjoidGdlcnRpbiIsImEiOiJYTW5sTVhRIn0.X4B5APkxkWVaiSg3KqMCaQ';
+const navStyle = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  padding: '10px'
+};
 
+export default class InternalMap extends Component {
 
-MAPBOX_TOKEN.accessToken = 'pk.eyJ1IjoidGdlcnRpbiIsImEiOiJYTW5sTVhRIn0.X4B5APkxkWVaiSg3KqMCaQ';
+    constructor(props) {
+        super(props);
+        this.state = {
+          viewport: {
+            latitude: 37.785164,
+            longitude: -100,
+            zoom: 2.8,
+            bearing: 0,
+            pitch: 0,
+            width: 1200,
+            height: 500,
+          }
+        };
+      }
 
-class InternalMap extends Component {
+    render() {
+        const {viewport} = this.state;
 
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-        lng: 5,
-        lat: 34,
-        width: 400,
-        height: 400,
-        zoom: 1.5
-    };
-}
-  
-
-  componentDidMount() {
-   const { lng, lat, zoom } = this.state;
-
-   const map = new ReactMapGL.Map({
-     container: this.mapContainer,
-     style: 'mapbox://styles/mapbox/streets-v9',
-     center: [lng, lat],
-     zoom
-   });
-
-
- }
-
-  
-
-
-  render() {
-
-    const {lng, lat, zoom} = this.state;
-
-    return (
-      <div>
-        <div>
-          onViewportChange={(viewport) => this.setState({viewport})}
-          width="100%"
-          height="100%"
-        </div>
-          
-          <div ref={el => this.mapContainer = el} />
-      </div>
-    );
-
-  }
+        return (
+              <MapGL style={{textAlign: 'left'}}
+                {...viewport}
+                mapStyle="mapbox://styles/mapbox/dark-v9"
+                mapboxApiAccessToken={TOKEN}>
+                <div className="nav" style={navStyle}>
+                  <NavigationControl/>
+                </div>
+              </MapGL>
+            );
+    }
 
 }
-
-
-export default InternalMap;
