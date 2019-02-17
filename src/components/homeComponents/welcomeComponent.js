@@ -33,13 +33,6 @@ function Welcome(props) {
   return (
     <div className={classes.root}>
 
-
-      <Grid container spacing={24}>
-        <Grid item xs>
-          <Paper className={classes.paper}><InternalMap /></Paper>
-        </Grid>
-      </Grid>
-
       <Grid container spacing={24}>
         <Grid item xs>
           <Paper className={classes.paper}><Purpose /></Paper>
