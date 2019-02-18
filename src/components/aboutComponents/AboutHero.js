@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import Image from "material-ui-image";
 import { withStyles } from "@material-ui/core/styles";
 import team from "../../images/team.jpg";
+import { Grid } from "@material-ui/core";
 
 const styles = theme => ({
   heroUnit: {
@@ -14,15 +15,17 @@ const styles = theme => ({
     filter: "grayscale(100%)"
   },
   heroContent: {
-    margin: "0 auto",
     padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`
   },
   headspacing: {
     marginTop: "25vh",
-    paddingLeft: "25px",
-    paddingRight: "25px",
     color: 'white'
   },
+  flex: {
+    direction: "column",
+    justify:"center",
+    alignItems:"center"
+  }
 });
 
 const AboutHero = props => {
@@ -31,6 +34,8 @@ const AboutHero = props => {
   return (
     <div className={classes.heroUnit}>
       <div className={classes.heroContent}>
+      <Grid className={classes.flex} container>
+        <Grid item xs={14} sm={12} md={12}>
         <Typography
           className={classes.headspacing}
           variant="h2"
@@ -39,6 +44,8 @@ const AboutHero = props => {
         >
           About HopeOneSource
         </Typography>
+        </Grid>
+        </Grid>
       </div>
     </div>
   );
