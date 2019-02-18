@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import MapGL, {NavigationControl} from 'react-map-gl';
+import ReactMapGL, {NavigationControl} from 'react-map-gl';
 const TOKEN = 'pk.eyJ1IjoidGdlcnRpbiIsImEiOiJYTW5sTVhRIn0.X4B5APkxkWVaiSg3KqMCaQ';
 const navStyle = {
   position: 'absolute',
@@ -8,6 +8,8 @@ const navStyle = {
   left: 0,
   padding: '10px'
 };
+
+
 
 export default class InternalMap extends Component {
 
@@ -26,18 +28,25 @@ export default class InternalMap extends Component {
         };
       }
 
+    _updateViewport = (viewport) => {
+        this.setState({viewport});
+    }
+
     render() {
         const {viewport} = this.state;
 
         return (
-              <MapGL style={{textAlign: 'left'}}
+              <ReactMapGL style={{textAlign: 'left'}}
                 {...viewport}
+                onViewportChange={this._updateViewport}
                 mapStyle="mapbox://styles/mapbox/dark-v9"
                 mapboxApiAccessToken={TOKEN}>
-                <div className="nav" style={navStyle}>
-                  <NavigationControl/>
+
+                <div style={{position: 'absolute', right: 0}}>
+                  <NavigationControl onViewportChange={this._updateViewport} />
                 </div>
-              </MapGL>
+
+              </ReactMapGL>
             );
     }
 
